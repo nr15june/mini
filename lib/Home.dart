@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:miniproject/AddAJob.dart';
+import 'package:miniproject/AddAJob.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -19,16 +20,16 @@ class _HomeState extends State<Home> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            if (homeData.isNotEmpty) ...[
-              // กล่องแรก
+            //if (homeData.isNotEmpty) ...[
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Container(
                     width: 100,
-                    height: 50, 
+                    height: 100, 
                     padding: EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
                       color: Colors.blue,
@@ -56,16 +57,16 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-            ] else
-              //หากไม่มีข้อมูลงาน
-              Expanded(
-                child: Center(
-                  child: Text(
-                    'No job data available',
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                ),
-              ),
+            // ] else
+            //   //หากไม่มีข้อมูลงาน
+            //   Expanded(
+            //     child: Center(
+            //       child: Text(
+            //         'No job data available',
+            //         style: TextStyle(color: Colors.grey),
+            //       ),
+            //     ),
+            //   ),
               
           ],
         ),
